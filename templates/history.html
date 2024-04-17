@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction History</title>
+</head>
+<body>
+    <h2>Prediction History</h2>
+    <ul>
+        {% for entry in history %}
+            <li>
+                <strong>Input Data:</strong> {{ entry.input_data }} |
+                <strong>Result:</strong> {{ entry.result_message }}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

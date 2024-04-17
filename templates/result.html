@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Predicted Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Predicted Result</h2>
+        {% if prediction == "You have Parkinson's Disease. Please consult a specialist." %}
+            <p class="parkinsons">{{ prediction }}</p>
+            <p>If you have any concerns or questions, it is recommended to consult a medical professional.</p>
+        {% elif prediction == "You are a Healthy Person." %}
+            <p class="healthy">{{ prediction }}</p>
+            <p>Great news! Continue to maintain a healthy lifestyle.</p>
+        {% else %}
+            <p class="error">There was an error processing the prediction. Please try again.</p>
+        {% endif %}
+    </div>
+</body>
+</html>

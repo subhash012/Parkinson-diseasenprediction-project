@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Parkinson's Diseases Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://cdn-prod.medicalnewstoday.com/content/images/articles/322/322635/neurons-in-parkinson-s-disease.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .content {
+            background-color: transparent;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            width: 80%;
+            max-width: 600px;
+            margin: 20px;
+            color: #fff; /* Set text color to white for better visibility */
+        }
+
+        h1 {
+            color: #fff;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        input {
+            padding: 10px;
+            margin-right: 10px;
+            width: 70%;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 12px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .parkinson-image {
+            width: 100%;
+            max-width: 600px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Parkinson's Diseases Prediction</h1>
+        <form action="/predict" method="POST">
+            <input type="text" name="data" id="data" placeholder="Enter data separated by commas (e.g., 88,102,65,0.001,0.00002,...)">
+            <button type="submit">Predict</button>
+        </form>
+        
+    </div>
+</body>
+</html>
